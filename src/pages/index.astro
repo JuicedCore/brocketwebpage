@@ -6,6 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 // Replace this with your actual Supabase URL
 const DOWNLOAD_URL = "https://muzunixvfbxrzpduahtg.supabase.co/storage/v1/object/sign/app-dist/app-arm64-v8a-release.apk?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9lNzMxOWQ4Yi0wNjk2LTQ4NmQtYWM4Yi0zOTZmNzBiYWI0ODIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJhcHAtZGlzdC9hcHAtYXJtNjQtdjhhLXJlbGVhc2UuYXBrIiwiaWF0IjoxNzczOTI1Mjg2LCJleHAiOjE3NzQ1MzAwODZ9.kpp6IWDABbkQsc9l79_OEptheKROjZQL2JAuUZDcZ9A";
+const IOS_REDIRECT_URL = "https://www.youtube.com/watch?v=J9NQFACZYEU&list=RDJ9NQFACZYEU&start_radio=1";
 ---
 
 <!doctype html>
@@ -116,17 +117,5 @@ const DOWNLOAD_URL = "https://muzunixvfbxrzpduahtg.supabase.co/storage/v1/object
 		</main>
 		<Footer />
 	</body>
-<script is:inline>
-  const downloadBtn = document.getElementById('download-link');
-  const YOUTUBE_URL = "https://www.youtube.com/watch?v=J9NQFACZYEU&list=RDJ9NQFACZYEU&start_radio=1";
 
-  downloadBtn.addEventListener('click', (e) => {
-    // 1. Let the download start naturally
-    // 2. Wait 1 second (so the browser initiates the file stream)
-    // 3. Yeet them to YouTube
-    setTimeout(() => {
-      window.location.href = YOUTUBE_URL;
-    }, 1000); 
-  });
-</script>
 </html>
