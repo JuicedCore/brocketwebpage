@@ -69,6 +69,16 @@ const DOWNLOAD_URL = "https://muzunixvfbxrzpduahtg.supabase.co/storage/v1/object
 				font-size: 0.9rem;
 				color: #555;
 			}
+.android {
+				background: #3ecf8e;
+				color: #000;
+			}
+			/* iOS Silver/Dark */
+			.ios {
+				background: #333;
+				color: #fff;
+				border: 1px solid #444;
+			}
 		</style>
 	</head>
 	<body>
@@ -88,14 +98,19 @@ const DOWNLOAD_URL = "https://muzunixvfbxrzpduahtg.supabase.co/storage/v1/object
   href={DOWNLOAD_URL} 
   id="download-link" 
   download="Brocket.apk" 
-  class="download-btn"
+  class="download-btn android"
 >
 					DOWNLOAD APK (ARM64)
 				</a>
-
-				<div class="warning">
+<a href={IOS_REDIRECT_URL} class="download-btn ios">
+						DOWNLOAD FOR IOS
+					</a>
+				<div class="chad-motto">
 					* If Chrome cries about "harmful files", and keeps yapping, ignore it. <br> 
 					CHAD knows what's best.
+				</div>
+<div class="warning">
+					* iOS: Apple is too restrictive for the Brotherhood. Enjoy the tunes.
 				</div>
 			</section>
 		</main>
