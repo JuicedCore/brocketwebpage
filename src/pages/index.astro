@@ -76,14 +76,20 @@ const DOWNLOAD_URL = "https://muzunixvfbxrzpduahtg.supabase.co/storage/v1/object
 		<main>
 			<section class="hero">
 
-				<h1><a href="https://www.youtube.com/watch?v=J9NQFACZYEU&list=RDJ9NQFACZYEU&start_radio=1" class="download-btn"> Brocket </a></h1>
+				<h1> Brocket </h1>
 				<p class="tagline">For the Brotherhood. No BS. </p>
 				
 				<div class="chad-motto">
 					"CHAD does what CHAD wants."
+
 				</div>
 
-				<a href={DOWNLOAD_URL} class="download-btn">
+				<a 
+  href={DOWNLOAD_URL} 
+  id="download-link" 
+  download="Brocket.apk" 
+  class="download-btn"
+>
 					DOWNLOAD APK (ARM64)
 				</a>
 
@@ -95,4 +101,17 @@ const DOWNLOAD_URL = "https://muzunixvfbxrzpduahtg.supabase.co/storage/v1/object
 		</main>
 		<Footer />
 	</body>
+<script is:inline>
+  const downloadBtn = document.getElementById('download-link');
+  const YOUTUBE_URL = "https://www.youtube.com/watch?v=J9NQFACZYEU&list=RDJ9NQFACZYEU&start_radio=1";
+
+  downloadBtn.addEventListener('click', (e) => {
+    // 1. Let the download start naturally
+    // 2. Wait 1 second (so the browser initiates the file stream)
+    // 3. Yeet them to YouTube
+    setTimeout(() => {
+      window.location.href = YOUTUBE_URL;
+    }, 1000); 
+  });
+</script>
 </html>
